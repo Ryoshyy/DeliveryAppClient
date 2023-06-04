@@ -1,7 +1,8 @@
 import axios from "axios";
+import config from "../config.json";
 
 const instance = axios.create({
-    baseURL: 'https://delivery-app-backend-node.herokuapp.com/'
+    baseURL: config.SERVER_URL
 });
 
 instance.interceptors.request.use((config)=>{
