@@ -1,0 +1,17 @@
+.CompanyAndProductList {
+  display: flex;
+  max-height: 100vh;
+  .Company {
+    margin: 15px 0px;
+    min-width: 10vh;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Products {
+    height: 100vh;
+    overflow: scroll;
+  }
+}

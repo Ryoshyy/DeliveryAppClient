@@ -1,0 +1,22 @@
+.Menu {
+  width: 100%;
+  text-transform: uppercase;
+  .Menu_list {
+    margin: 0 auto;
+    list-style: none;
+    .Menu_items {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .Item {
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+      }
+      .Link:hover {
+        padding: 20px;
+        text-decoration: none;
+      }
+    }
+  }
+}

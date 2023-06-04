@@ -1,0 +1,44 @@
+@mixin responsive-display($display) {
+  @if map-has-key($display, sm) {
+    display: map-get($display, sm); // Display "block" for sm breakpoint
+  }
+  
+  @if map-has-key($display, xs) {
+    @media (max-width: 599px) {
+      display: map-get($display, xs); // Display "none" for xs breakpoint
+    }
+  }
+}
+
+.root {
+    margin-top: 50px;
+    .upper_navbar{
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      height: 50px;
+      background-color: rgb(44, 44, 44);
+      z-index: 50;
+      .menu_icon{
+        margin: 12px;
+        color: white;
+        :hover{
+          color:cadetblue;
+        }
+      }
+      .nav_links{
+        @include responsive-display((sm: block, xs: none));
+        width: 100%;
+        margin: 0px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;       
+      }
+      
+    }
+  }
+
+  

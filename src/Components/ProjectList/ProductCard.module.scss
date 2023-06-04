@@ -1,0 +1,15 @@
+
+.card{
+    .card_img{
+        height: 20vh;
+        object-fit: contain;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .title {  
+        overflow:hidden !important;
+      }
+}
+  
