@@ -38,7 +38,7 @@ const CartOrders = () => {
       .filter((o) => o.product.companyId == selectCompanyId)
       .reduce((sum, v) => sum + v.count * v.product.unitPrice, 0);
     setAmount(amount);
-  }, [selectCompanyId]);
+  }, [selectCompanyId, orders]);
 
   useEffect(() => {
     let state = [...companies];
